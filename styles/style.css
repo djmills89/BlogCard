@@ -13,8 +13,8 @@
     --grey-500: hsl(0, 0%, 42%);
     --grey-800: hsl(0, 0%, 7%);
     /* Font Family */
-    --ff-normal: 'Figtree';
-    --ff-italic: 'Figtree Italic';
+    --ff-normal: 'Figtree', sans-serif;
+    --ff-italic: 'Figtree Italic', sans-serif;
     /* Font Size */
     --fs-base: 1.6rem;
     --fs-heading: 2.4rem;
@@ -23,8 +23,105 @@
     --fw-normal: 500;
     --fw-bold: 800;
     /* Spacing */
-    --pad-300: 2.4rem;
-    --pad-150: 1.2rem;
-    --pad-100: 0.8rem;
-    --pad-50: 0.4rem;
+    --space-300: 2.4rem;
+    --space-150: 1.2rem;
+    --space-100: 0.8rem;
+    --space-50: 0.4rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--yellow-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--ff-normal);
+}
+
+footer {
+    margin-block-start: var(--space-300);
+}
+
+.card {
+    background-color: white;
+    border-radius: 2rem;
+    border: 1px solid var(--grey-800);
+    box-shadow: var(--space-100) var(--space-100) var(--grey-800);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 384px;
+    min-height: 532px;
+}
+
+.container {
+    margin: var(--space-300);
+}
+
+.category {
+    background-color: var(--yellow-primary);
+    padding-inline-start: var(--space-150);
+    padding-inline-end: var(--space-150);
+    padding-block: var(--space-100);
+    width: 5.6rem;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    border-radius: 0.3rem;
+}
+
+.card-title {
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-bold);
+    line-height: 1.5;
+}
+
+.card-img {
+    border-radius: 1rem;
+    display: block;
+}
+
+.card-description {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-normal);
+    line-height: 1.5;
+    
+    color: var(--grey-500);
+}
+
+.published-date {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-normal);
+    line-height: 1.5;
+}
+
+.profile-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-profile {
+    width: 35px;
+    height: 35px;
+}
+
+.author {
+    margin-inline-start: var(--space-150);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    line-height: 1.5;
+}
+
+@media (max-width: 30rem) {
+    .card {
+        width: 85%;
+    }
+    .card-img {
+        width: 100%;
+        margin-inline: 0 auto;
+    }
 }
